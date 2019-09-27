@@ -22,7 +22,7 @@ function registerUser()
     if (!empty($_POST['email_address'])) { //checking the email is set
         // running insert query
         mysqli_query($con, "INSERT INTO users(email_address, password, first_name, last_name, address_line_1, address_line_2, city, county, mobile)
-")
+		VALUES ('$email_address', '$password', '$first_name', '$last_name', '$address_line_1', '$address_line_2', '$city', '$county', '$mobile' );")
         or die(mysqli_error($con));
         mysqli_close($con);
 
